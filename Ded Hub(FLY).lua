@@ -11,6 +11,26 @@ local closebutton = Instance.new("TextButton")
 local mini = Instance.new("TextButton")
 local mini2 = Instance.new("TextButton")
 
+local discordButton = Instance.new("TextButton")
+discordButton.Parent = Frame
+discordButton.BackgroundColor3 = Color3.fromRGB(28, 103, 255)  -- Синий цвет
+discordButton.Size = UDim2.new(0, 100, 0, 28)
+discordButton.Font = Enum.Font.SourceSans
+discordButton.Text = "Discord"
+discordButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+discordButton.TextSize = 14
+
+discordButton.Position = UDim2.new(0.469327301, 0, -0.5, 0)
+
+discordButton.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.gg/kBrqfCr9j9")  -- Копирование ссылки в буфер обмена
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Discord Link",
+        Text = "Ссылка на Discord скопирована в буфер обмена!",
+        Duration = 3
+    })
+end)
+
 main.Name = "main"
 main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
