@@ -23,7 +23,7 @@ discordButton.TextSize = 14
 discordButton.Position = UDim2.new(0.469327301, 0, -0.5, 0)
 
 discordButton.MouseButton1Click:Connect(function()
-    setclipboard("https://discord.gg/kBrqfCr9j9")  -- Копирование ссылки в буфер обмена
+    setclipboard("https://discord.gg/Wh5uB3v7uT")  -- Копирование ссылки в буфер обмена
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Discord Link",
         Text = "Ссылка на Discord скопирована в буфер обмена!",
